@@ -1,0 +1,28 @@
+title: Post a volunteer opportunity
+saveBtn: Post volunteer
+redirect: /?type=volunteers
+properties:
+  title:
+    input: text
+    label: Title
+    placeholder: Graphic Design, Accounting, etc.
+    key: title
+  description:
+    input: textarea
+    label: Description
+    placeholder: Requirements for the job
+    key: description
+  dates:
+    input: dates
+    label: Availability
+    start:
+      placeholder: Starting Date
+      icon: true
+      key: date.start
+    end:
+      placeholder: End Date
+      key: date.end
+  location:
+    input: place
+    label: Location
+    key: place

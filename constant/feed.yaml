@@ -1,0 +1,31 @@
+jobs:
+  collection: 'ads'
+  fields: ['title', 'description', 'place.formatted_address']
+  types: ['hireme', 'hire']
+volunteers:
+  collection: 'ads'
+  fields: ['title', 'description', 'place.formatted_address']
+  types: ['volunteering', 'myvolunteer']
+ideas:
+  collection: 'ads'
+  fields: ['title', 'description', 'place.formatted_address']
+  types: ['ideas']
+housing:
+  collection: 'ads'
+  fields: ['title', 'description', 'place.formatted_address']
+  types: ['housing', 'host']
+traveling:
+  collection: 'ads'
+  fields: ['title', 'description', 'place.formatted_address']
+  types: ['traveling']
+other:
+  collection: 'ads'
+  fields: ['title', 'description', 'place.formatted_address']
+  types: ['other']
+events:
+  collection: 'ads'
+  fields: ['title', 'description', 'place.formatted_address']
+  types: ['event']
+people:
+  collection: 'users'
+  fields: ['firstName', 'lastName', 'university', 'year', 'occupation', 'place.formatted_address']

@@ -1,0 +1,14 @@
+index:
+  .root
+    .logotip
+      a(href='/')
+        img(src='/img/logoBlue.png' width='100' height='30')
+    .search
+      form(action='#' on-submit='globalSearch()')
+        input.searchArea(type='text' placeholder='Начните вводить поисковый запрос' value='{{search}}')
+    .navigation
+      a(class="{{activeClass('/')}}" href='/') Главная
+      a(class="{{activeClass('/catalogue')}}" href='/catalogue') Каталог
+      a(class="{{activeClass('/about')}}" href='/about') О компании
+      a.-link(href='#') 
+        img(src='/img/arrow.png' width='10' height='20')

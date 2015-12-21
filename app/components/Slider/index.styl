@@ -1,0 +1,78 @@
+.root
+  margin 30px 0 0
+
+.sliderInner
+  overflow hidden
+  position relative
+  min-height 400px
+
+.createInform
+  width 100%
+  display flex
+  justify-content center
+
+.slide
+  display flex
+  align-items center
+  flex-direction column
+  position absolute
+  left 0
+  top 0
+  width 100%
+  opacity 0
+
+  &.-active
+    opacity 1
+    z-index 98
+    transition opacity 1s linear
+    .slideTitle
+      left 0
+      transition .7s linear
+    .slideDescripion
+      left 0
+      transition 1s linear
+
+.slideTitle
+  position relative
+  left 100%
+  font 30px / 120% 'Thin', arial, sans-serif
+
+.slideDescripion
+  font 17px / 120% 'Thin', arial, sans-serif
+  margin 15px 0 0
+  position relative
+  left 100%
+
+.slideImage
+  img
+    max-width 100%
+    max-height 100%
+    display block
+    height auto
+
+.slideBtns
+  display flex
+  flex-direction column
+  justify-content center
+  position absolute
+  right 0
+  height 100%
+  cursor pointer
+  z-index 99
+
+.slideIcon
+  font-size 14px
+  line-height 100%
+  color: $colors.blueColor
+  &.-active
+    color: $colors.blackColor
+
+.edit
+  background url('/img/edit.png') no-repeat 0 0
+  background-size 100% 100%
+  width 15px
+  height 15px
+  position absolute
+  top 5px
+  right 5px
+  z-index 100

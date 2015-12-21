@@ -1,0 +1,62 @@
+.DS_Store
+/public/gen
+/lib/
+*.swp
+/node_modules/
+/.idea/
+/build/
+Gemfile.lock
+/tmp/
+*.orig
+npm-debug.log
+
+# Derby bundle folder
+/public/derby/
+
+# Upload folder
+/public/upload/
+
+# Bower installation
+/bower_components/
+/web_modules/
+
+# Compiled and minified assets
+/public/css/*
+!/public/css/vendor/
+/public/js/minified/
+/public/js/compiled/
+
+# Compiled constants
+/src/const/json/
+/src/*/*/const/json/
+
+# Exclude compiled sprite images
+/public/img/sprites/
+
+# Exclude all fontello files except needed ones.
+/public/fonts/fontello-*
+/public/fonts/fontello/*
+!/public/fonts/fontello/config.json
+!/public/fonts/fontello/css/
+/public/fonts/fontello/css/*
+!/public/fonts/fontello/css/fontello-codes.css
+!/public/fonts/fontello/font/
+
+# Exclude vendor fonts
+/public/fonts/vendor/
+
+# Exclude fontello temp files which may accidently remain in root folder
+/.fontello
+/.fontello.zip
+/.fontello.src
+
+# Exclude css vendor files
+/styles/vendor/*
+# Except the main one with overrides and custom ones (converted manually)
+!/styles/vendor/index.styl
+
+# Exclude Test screenshots
+/test/screenshots/
+
+/temp_prices
+/src/games/prices/screenshots

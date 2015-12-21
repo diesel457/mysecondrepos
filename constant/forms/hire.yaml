@@ -1,0 +1,69 @@
+title: Post a job
+saveBtn: Post a job
+redirect: /?type=jobs
+properties:
+  title:
+    input: text
+    label: Title
+    placeholder: Communication specialist, Senior developer, ...
+    key: title
+  description:
+    input: textarea
+    label: About
+    placeholder: Requirements for the job
+    key: description
+  dates:
+    input: dates
+    label: Availability
+    start:
+      placeholder: Starting Date
+      icon: true
+      key: date.start
+    end:
+      placeholder: End Date
+      key: date.end
+  location:
+    input: place
+    label: Location
+    parent: online
+    check: true
+    key: place
+  coverImage:
+    input: upload
+    label: Hire Me page cover image
+    key: image
+  smallImage:
+    input: upload
+    label: Preview image (in list)
+    key: smallImage
+  linkCheck:
+    input: checkbox
+    label: External sign up
+    global: true
+    key: weblink
+  link:
+    input: url
+    label: Enter the link
+    parent: weblink
+    check: false
+    placeholder: Name of your link
+    key: link
+  linkDisabled:
+    input: text
+    label: Enter the link
+    parent: weblink
+    check: true
+    disabled: true
+  textLink:
+    input: text
+    label: Display event link as
+    parent: weblink
+    check: false
+    placeholder: Display name
+    key: displayName
+  textLinkDisabled:
+    input: text
+    label: Display event link as
+    parent: weblink
+    check: true
+    disabled: true

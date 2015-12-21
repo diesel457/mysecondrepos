@@ -1,0 +1,54 @@
+.item
+  margin 0 0 10px
+
+.progressBox
+  position relative
+  width 272px
+  overflow hidden
+  display flex
+  justify-content center
+  align-items center
+  padding 3px 0
+
+.fileName
+  color: $colors.whiteColor
+  position relative
+
+.progress
+  position absolute
+  background: $colors.blueColor
+  height 100%
+  left 0
+  top 0
+
+.imagePreviewBox
+  display flex
+  border: 1px solid $colors.greyColor
+  justify-content center
+  align-items center
+  padding 10px
+  width 272px
+  position relative
+  &:hover
+    .delImg
+      opacity 1
+      transition .2s linear
+
+.imagePreview
+  height 100px
+  width 250px
+
+.delImg
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100%
+  display flex
+  justify-content center
+  align-items center
+  font-size 35px
+  color: red
+  opacity 0
+  cursor pointer
+  background-color: rgba(255, 255, 255, .8)

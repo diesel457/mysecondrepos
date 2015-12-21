@@ -1,0 +1,42 @@
+index:
+  .root
+    h1 Форма создания карточки
+    form(on-submit='createCard()')
+      .inputBox
+        label.inputName Заголовок
+        input.inputArea(type='text' placeholder='Заголовок для карточки' value='{{card.title}}' required)
+      .inputBox
+        label.inputName Новинка
+        input(type='checkbox' checked='{{card.new}}')
+      .inputBox
+        label.inputName 
+        view(is='Upload' value='{{card.images}}')
+      .inputBox
+        label.inputName Описание
+        textarea.inputArea.-textarea(placeholder='Описание для карточки' required) {{card.description}}
+      .inputBox
+        label.inputName Цена
+        input.inputArea(type='text' placeholder='Цена товара' value='{{card.price}}' required)
+        span.parametr руб.
+      .inputBox
+        span.optionsTitle Характеристики:
+      each optionsArray as #option, #index
+        .inputBox
+          label.inputName {{#option.label}}
+          input.inputArea(type='text' placeholder='{{#option.label}}' value='{{optionsArray[#index].value}}' required)
+          if #option.key === 'length' || #option.key === 'width' || #option.key === 'height'
+            span.parametr см.
+          else if #option.key === 'capacity'
+            span.parametr л.
+      
+      button.Btn.-blueBtn(type='submit') Создать карточку
+
+          
+          
+          
+    
+
+  
+  
+  
+  

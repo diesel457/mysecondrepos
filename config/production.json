@@ -1,0 +1,19 @@
+{
+  "STAGE": "production",
+  "NODE_ENV": "production",
+  "PORT": 3000,
+  "BASE_URL": "http://alumconnect.org",
+  "FORUM_URL": "http://alumconnect.org/forum",
+  "MONGO_URL": "mongodb://localhost:27017/app",
+  "REDIS_URL": "redis://localhost:6379/1",
+  "SESSION_SECRET": "17427aj57a5369h537eo572aoerw517b",
+
+  "GOOGLE_BROWSER_KEY": "AIzaSyDa-z4S86mKDsUGjKPwCEYan_e8KESjoi0",
+  "GOOGLE_SERVER_KEY": "AIzaSyDd7fk31pu5sEZEgGg1l8BoVrvu7-3XTZU",
+
+  "LINKEDIN_KEY": "KUSStefod58c3B3SmMb6bVsHGI9cx3ikCHShwxUFwugLLr8bCT5dbqLPXdQytFH_",
+  "LINKEDIN_SECRET": "jr0cNEAY-JKHUItJcc7DCY_Z5lmMNuJkpWqX--vJAl_BjiVOxO4pM9-jECtFgSjV",
+
+  "FACEBOOK_KEY": "1609597692655579",
+  "FACEBOOK_SECRET": "7da1b191886eb07e98743479446b15e5"
+}

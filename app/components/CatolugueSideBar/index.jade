@@ -1,0 +1,68 @@
+index:
+  .root
+    .filterItem(class="{{openClass(activeBtn, 'price')}}")
+      .btnBox
+        img.icon(src='/img/side-bar-arrow.png')
+        button.sideBarBtn(on-click="openFilter('price')") Цена, руб.
+      .filterContent.-price
+        .inputBox
+          label от
+          .input
+            input(type='number' value='{{paramsFilters.price.from}}')
+        .inputBox
+          label до
+          .input
+            input(type='number' value='{{paramsFilters.price.to}}')
+            
+    if producerFilters
+      .filterItem(class="{{openClass(activeBtn, 'producers')}}")
+        .btnBox
+          img.icon(src='/img/side-bar-arrow.png')
+          button.sideBarBtn(on-click="openFilter('producers')") Производитель
+        .filterContent
+          each producerFilters as #filter
+            .inputBox
+              input(id='{{#filter.filterName}}' type='checkbox') 
+              label.checkboxName(for='{{#filter.filterName}}') {{#filter.filterName}}
+              
+    if typeFilters
+      .filterItem(class="{{openClass(activeBtn, 'types')}}")
+        .btnBox
+          img.icon(src='/img/side-bar-arrow.png')
+          button.sideBarBtn(on-click="openFilter('types')") Тип
+        .filterContent
+          each typeFilters as #filter
+            .inputBox
+              input(id='{{#filter.filterName}}' type='checkbox') 
+              label.checkboxName(for='{{#filter.filterName}}') {{#filter.filterName}}
+              
+    if materialFilters
+      .filterItem(class="{{openClass(activeBtn, 'materials')}}")
+        .btnBox
+          img.icon(src='/img/side-bar-arrow.png')
+          button.sideBarBtn(on-click="openFilter('materials')") Материал
+        .filterContent
+          each materialFilters as #filter
+            .inputBox
+              input(id='{{#filter.filterName}}' type='checkbox') 
+              label.checkboxName(for='{{#filter.filterName}}') {{#filter.filterName}}
+                      
+    if formFilters
+      .filterItem(class="{{openClass(activeBtn, 'forms')}}")
+        .btnBox
+          img.icon(src='/img/side-bar-arrow.png')
+          button.sideBarBtn(on-click="openFilter('forms')") Форма
+        .filterContent
+          each formFilters as #filter
+            .inputBox
+              input(id='{{#filter.filterName}}' type='checkbox') 
+              label.checkboxName(for='{{#filter.filterName}}') {{#filter.filterName}}
+            
+    .submit
+      button.Btn.-blueBtn.-filterBtn Фильтровать
+    
+  
+
+  
+  
+  

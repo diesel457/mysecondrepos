@@ -1,0 +1,95 @@
+*
+  margin 0
+  padding 0
+  box-sizing border-box
+  &:before, &:after
+    box-sizing border-box
+
+body
+  optimizations()
+  font 12px 'Regular', arial, sans-serif
+
+h1
+h2
+h3
+h4
+h5
+h6
+  letter-spacing 3px
+  color: $colors.whiteColor
+  font-family 'Thin', arial, sans-serif
+  font-weight 100
+  line-height 120%
+
+input
+textarea
+select
+  outline none
+  -webkit-appearance none
+  -moz-appearance none
+  border none
+  background transparent
+
+input[type='checkbox']
+  border: 1px solid $colors.greyColor
+  width 15px
+  height 15px
+  position relative
+  &:checked
+    &:before
+      content: ''
+      width 70%
+      height 70%
+      top 15%
+      left 15%
+      position absolute
+      background: $colors.blueColor
+
+._content
+  display flex
+  flex-direction column
+
+._row
+  display flex
+  width 100%
+  justify-content center
+
+._inner
+  width 70%
+  &.-full
+    width 100%
+
+.Btn
+  display inline-block
+  text-decoration none
+  border-radius 3px
+  padding 5px 20px
+  transition .2s linear
+  cursor pointer
+  text-align center
+  outline none
+
+  &.-whiteBtn
+    color: $colors.whiteColor
+    border: 1px solid $colors.whiteColor
+    &:hover
+      background-color rgba(255, 255, 255, 0.3)
+
+  &.-blueBtn
+    background-color: $colors.blueColor
+    border: 1px solid $colors.blueColor
+    color: $colors.whiteColor
+    &.-small
+      padding 5px 15px
+      margin 0
+    &:hover
+      color: $colors.blueColor
+      background-color: $colors.whiteColor
+
+  &.-orangeBtn
+    background-color: $colors.orangeColor
+    border: 1px solid $colors.orangeColor
+    color: $colors.whiteColor
+    &:hover
+      color: $colors.orangeColor
+      background-color: $colors.whiteColor

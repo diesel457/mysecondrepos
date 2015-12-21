@@ -1,0 +1,49 @@
+title: Post an idea
+saveBtn: Post idea
+redirect: /?type=ideas
+properties:
+  title:
+    input: text
+    label: Title
+    placeholder: Title for your idea
+    key: title
+  coverImage:
+    input: upload
+    label: Cover image
+    key: image
+  description:
+    input: textarea
+    label: Description
+    placeholder: What is your Idea?
+    key: description
+  linkCheck:
+    input: checkbox
+    label: URL
+    global: true
+    key: weblink
+  link:
+    input: url
+    label: Enter the link
+    parent: weblink
+    check: false
+    placeholder: Name of your link
+    key: link
+  linkDisabled:
+    input: text
+    label: Enter the link
+    parent: weblink
+    check: true
+    disabled: true
+  textLink:
+    input: text
+    label: Display event link as
+    parent: weblink
+    check: false
+    placeholder: Display name
+    key: displayName
+  textLinkDisabled:
+    input: text
+    label: Display event link as
+    parent: weblink
+    check: true
+    disabled: true

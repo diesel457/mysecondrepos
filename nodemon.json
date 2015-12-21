@@ -1,0 +1,4 @@
+{
+  "watch": ["core", "app", "components", "server"],
+  "ext": "js coffee yaml"
+}

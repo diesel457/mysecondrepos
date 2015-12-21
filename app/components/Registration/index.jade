@@ -1,0 +1,20 @@
+index:
+  .root
+    h1 Форма создания админа
+    form(role='form' on-submit='submit()')
+      .inputBox
+        label.inputName Электронная почта
+        input.inputArea(type='email' placeholder='Электронная почта' value='{{email}}' required)
+      .inputBox
+        label.inputName Имя
+        input.inputArea(type='text' placeholder='Имя' value='{{firstName}}' required)
+      .inputBox
+        label.inputName Фамилия
+        input.inputArea(type='text' placeholder='Фамилия' value='{{lastName}}' required)
+      .inputBox
+        label.inputName Пароль
+        input.inputArea(type='password' placeholder='Пароль' value='{{password}}' required)
+      .inputBox
+        label.inputName Пароль
+        input.inputArea(type='password' placeholder='Пароль' value='{{confirm}}' required)
+      button.Btn.-blueBtn(type='submit') Создать Админа

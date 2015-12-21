@@ -1,0 +1,27 @@
+index:
+  .root
+    h1 Форма создания информационного блока
+    form(on-submit='createInformBox()')
+      if type === 'top'
+        .inputBox
+          label.inputName Заголовок
+          input.inputArea(type='text' placeholder='Заголовок блока' value='{{inform.title}}' required)
+          
+      .inputBox
+        label.inputName Загрузить задний фон для блока
+        view(is='Upload' value='{{inform.background}}' single=true)
+      .inputBox
+        label.inputName Описание
+        textarea.inputArea.-textarea(placeholder='Описание для карточки' required) {{inform.description}}
+      
+      button.Btn.-blueBtn(type='submit') Создать информционный блок
+
+          
+          
+          
+    
+
+  
+  
+  
+  

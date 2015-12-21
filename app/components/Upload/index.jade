@@ -1,0 +1,33 @@
+index:(bem='Upload')
+  .root
+    if single
+      if value
+        .item
+          .imagePreviewBox
+            .imagePreview(style='background: url("/project-image/{{value}}") no-repeat center center; background-size:contain;')
+            .delImg(on-click='delImg()') 
+              img(src='/img/cross.png')
+          span.progressBox
+            span.progress(style="width: {{getWidth(fileData.progress)}}%")
+            span.fileName {{fileName}}
+      else   
+        input(type='file' name='uploadFile' on-change='changeInput($event)' value='{{inputValue}}')
+        
+    else    
+      if value
+        each value as #img, #index
+          .item
+            .imagePreviewBox
+              .imagePreview(style='background: url("/project-image/{{#img}}") no-repeat center center; background-size:contain;'
+                as='asdasd')
+              .delImg(on-click='delImg(#index)') 
+                img(src='/img/cross.png')
+            span.progressBox
+              span.progress(style="width: {{getWidth(fileData.progress)}}%")
+              span.fileName {{fileName}}
+                
+      input(type='file' name='uploadFile' on-change='changeInput($event)' value='{{inputValue}}')
+    
+    
+    
+  

@@ -1,0 +1,17 @@
+index:
+  unless informTop
+    .createInform
+      a(href='/create/inform/top').Btn.-blueBtn Создать информационный блок
+  else
+    .root(style='background-image: url("/project-image/{{informTop.background}}")')
+      a.edit(href='/edit/inform/top/{{informTop.id}}')
+      
+      if informTop.title
+        h1 {{informTop.title}}
+        
+      if informTop.description
+        each informTop.description as #paragraph
+          p {{#paragraph}}
+
+      a.Btn.-whiteBtn(href='/catalogue') Перейти в полный каталог
+      a.globalSearchLink(href='/catalogue') Расширенный поиск &nbsp; &rarr;

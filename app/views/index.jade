@@ -1,0 +1,14 @@
+//- import(src='./layout')
+
+Head:
+  meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+
+Title:
+  | {{#root._page.title}}
+
+Body:
+  view(is='{{$render.ns}}')
+
+BodyElement:
+  <body class="{{layoutClass($render.ns)}}">
+  view(is='{{$render.prefix}}Body')

@@ -1,0 +1,6 @@
+templates:
+  user: "
+    \nДобрый день, меня зовут, <%= name %>\n
+    \nЯ заинтересовался вашим товаром: http://localhost:3000/card/<%= cardId %>\n
+    \nЭто мой телефон: <%= telephone %>
+    "

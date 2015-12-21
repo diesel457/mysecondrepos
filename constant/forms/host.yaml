@@ -1,0 +1,67 @@
+title: Post host
+saveBtn: Post host
+redirect: /?type=housing
+properties:
+  title:
+    input: text
+    label: Title
+    placeholder: Share a compelling title with the community
+    key: title
+  location:
+    input: place
+    label: Location
+    key: place
+  dates:
+    input: dates
+    label: Dates
+    start:
+      placeholder: Starting Date
+      icon: true
+      key: date.start
+    end:
+      placeholder: End Date
+      key: date.end
+  description:
+    input: textarea
+    label: Description
+    placeholder: More details about this post(optional)
+    key: description
+  coverImage:
+    input: upload
+    label: Host page cover image
+    key: image
+  smallImage:
+    input: upload
+    label: Preview image (in list)
+    key: smallImage
+  linkCheck:
+    input: checkbox
+    label: External sign up
+    global: true
+    key: weblink
+  link:
+    input: url
+    label: Enter the link
+    parent: weblink
+    check: false
+    placeholder: Name of your link
+    key: link
+  linkDisabled:
+    input: text
+    label: Enter the link
+    parent: weblink
+    check: true
+    disabled: true
+  textLink:
+    input: text
+    label: Display event link as
+    parent: weblink
+    check: false
+    placeholder: Display name
+    key: displayName
+  textLinkDisabled:
+    input: text
+    label: Display event link as
+    parent: weblink
+    check: true
+    disabled: true

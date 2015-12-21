@@ -1,0 +1,25 @@
+index:
+  .root
+    if card.new
+      .mark Новинка
+      
+    a.edit(href='/edit/{{card.id}}')
+    if cardImg
+      .image
+        img(src='/project-image/{{cardImg}}')
+    
+    .name {{card.title}}
+    
+    .description {{card.description}}
+    
+    .inform 
+      each card.options as #option, #index
+        if #index < 3
+          span {{#option.label}} : {{#option.value}}
+        
+    a.link(href='/card/{{card.id}}') Все характеристики &nbsp; &rarr;
+    
+    .price {{card.price}} Руб.
+    
+    with card as #card
+      a.Btn.-blueBtn(on-click='open(#card.id)') Связаться с менеджером

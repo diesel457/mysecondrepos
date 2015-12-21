@@ -1,0 +1,57 @@
+title: Post other
+saveBtn: Post other
+redirect: /?type=other
+properties:
+  title:
+    input: text
+    label: Title
+    placeholder: Share a compelling title with the community
+    key: title
+  description:
+    input: textarea
+    label: Description
+    placeholder: More details about this post(optional)
+    key: description
+  location:
+    input: place
+    label: Location
+    key: place
+  coverImage:
+    input: upload
+    label: Host page cover image
+    key: image
+  smallImage:
+    input: upload
+    label: Preview image (in list)
+    key: smallImage
+  linkCheck:
+    input: checkbox
+    label: External sign up
+    global: true
+    key: weblink
+  link:
+    input: url
+    label: Enter the link
+    parent: weblink
+    check: false
+    placeholder: Name of your link
+    key: link
+  linkDisabled:
+    input: text
+    label: Enter the link
+    parent: weblink
+    check: true
+    disabled: true
+  textLink:
+    input: text
+    label: Display event link as
+    parent: weblink
+    check: false
+    placeholder: Display name
+    key: displayName
+  textLinkDisabled:
+    input: text
+    label: Display event link as
+    parent: weblink
+    check: true
+    disabled: true

@@ -1,0 +1,33 @@
+index:
+  .root
+    unless confirm
+      h1 Связаться с менеджером
+      form(on-submit='sendEmail()')
+      
+        .inputBox
+          label.inputName Ваше имя
+          input.inputArea(type='text' placeholder='Имя' value='{{name}}' required)
+            
+        .inputBox
+          label.inputName Ваш телефон
+          input.inputArea(type='number' placeholder='Телефон' value='{{telephone}}' required)
+          
+        .inputBox
+          label.inputName Ваша электронная почта
+          input.inputArea(type='email' placeholder='Почта' value='{{email}}' required)
+        
+        button.Btn.-blueBtn(type='submit') Отправить
+    
+    else
+      .confirmMassege 
+        | Ваше письмо отрпавленно
+
+          
+          
+          
+    
+
+  
+  
+  
+  

@@ -1,0 +1,88 @@
+title: Create an event
+saveBtn: Create event
+redirect: /?type=events
+interests: true
+properties:
+  title:
+    input: text
+    label: Title
+    placeholder: Name of your event
+    key: title
+  description:
+    input: textarea
+    label: About
+    placeholder: Description your event
+    key: description
+  paid:
+    input: checkbox
+    label: Is this a paid event?
+    key: paid
+  dates:
+    input: dates
+    label: Dates
+    start:
+      placeholder: Starting Date
+      icon: true
+      key: date.start
+    end:
+      placeholder: End Date
+      key: date.end
+  time:
+    input: time
+    label: Time
+    placeholder: Pick time
+    key: date.time
+  onlineCheck:
+    input: checkbox
+    label: Is this an online event?
+    key: online
+  location:
+    input: place
+    label: Location
+    parent: online
+    check: true
+    key: place
+  online:
+    input: url
+    label: Online link
+    parent: online
+    check: false
+    key: linkOnline
+  coverImage:
+    input: upload
+    label: Event page cover image
+    key: image
+  smallImage:
+    input: upload
+    label: Preview image (in list)
+    key: smallImage
+  linkCheck:
+    input: checkbox
+    label: External sign up
+    key: weblink
+  link:
+    input: url
+    label: Enter the link
+    parent: weblink
+    check: false
+    placeholder: Name of your link
+    key: link
+  linkDisabled:
+    input: text
+    label: Enter the link
+    parent: weblink
+    check: true
+    disabled: true
+  textLink:
+    input: text
+    label: Display event link as
+    parent: weblink
+    check: false
+    placeholder: Display name
+    key: displayName
+  textLinkDisabled:
+    input: text
+    label: Display event link as
+    parent: weblink
+    check: true
+    disabled: true

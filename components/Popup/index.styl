@@ -1,0 +1,26 @@
+.overlay
+  position fixed
+  top 0
+  left 0
+  right 0
+  bottom 0
+  display flex
+  justify-content center
+  align-items center
+  background rgba(0, 0, 0, 0.25)
+  visibility visibility
+  opacity 1
+  transition .2s linear
+  z-index 101
+
+  &.-hidden
+    visibility hidden
+    opacity 0
+
+.root
+  &.-callManeger
+    background: $colors.whiteColor
+    width 100%
+    max-width 500px
+    border-radius 6px
+    padding 20px

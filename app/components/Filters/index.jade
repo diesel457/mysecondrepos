@@ -1,0 +1,46 @@
+index:
+  .root
+    .filtersBox
+      .filter 
+        .name Цена
+        .input.-small
+          input(type='text' placeholder='От:' value='{{filterCheck.price.from}}')
+        .spacer — 
+        .input.-small
+          input(type='text' placeholder='До:' value='{{filterCheck.price.to}}')
+        .currency Руб.
+      
+      if typeFilters
+        .filter
+          .name Тип
+          .input
+            select
+              each typeFilters as #filter, #index
+                option(selected='{{ filterCheck[#filter.filterType] === #filter.filterName }}') {{ #filter.filterName }}
+            .arrow &#9660;
+            
+      if materialFilters
+        .filter
+          .name Материал
+          .input
+            select
+              each materialFilters as #filter, #index
+                option(selected='{{ filterCheck[#filter.filterType] === #filter.filterName }}') {{ #filter.filterName }}
+            .arrow &#9660;
+            
+      if formFilters
+        .filter
+          .name Форма
+          .input
+            select
+              each formFilters as #filter
+                option(selected='{{ filterCheck[#filter.filterType] === #filter.filterName }}') {{ #filter.filterName }}
+            .arrow &#9660;
+          
+    button.Btn.-blueBtn.-filter(on-click='getFilter()') Фильтр
+    
+
+  
+  
+  
+  

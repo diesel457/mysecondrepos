@@ -1,0 +1,39 @@
+index:
+  .root
+    h1 {{card.title}}
+    .informBox 
+      if card.images
+        .images
+          .mainImage 
+            if card.new
+              .mark Новинка
+            img(class='-active' src='/project-image/{{card.images[imageIndex]}}' as='mainImage')
+          
+          if card.images.length > 1
+            .imagesList
+              each card.images as #image, #index
+                .imageBtn(class='{{if imageIndex === #index}}-active{{/}}' on-click='changeImage(#index)')
+                  img(src='/project-image/{{card.images[#index]}}')
+      
+      .inform 
+        .price
+          .currency
+            | Цена:
+          .priceValue {{card.price}} руб.
+        
+        .optionsList
+          .currency
+            | Характеристики: 
+          each card.options as #option 
+            .option 
+              .marker &#8226; 
+              | {{#option.value}}
+              if #option.key === 'length' || #option.key === 'width' || #option.key === 'height'
+                span.parametr см.
+              else if #option.key === 'capacity'
+                span.parametr л.
+                
+        with card as #card
+          a.Btn.-blueBtn(on-click='open(#card.id)') Связаться с менеджером
+        
+    .description {{card.description}}

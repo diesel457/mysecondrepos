@@ -1,0 +1,24 @@
+index:
+  .root
+    unless slider 
+      .createInform
+        a(href='/create/slider').Btn.-blueBtn Создать слайдер
+    else
+      .sliderInner
+        a.edit(href='/create/slider')
+        each slider as #slide, #index
+          .slide(class='{{if #index === active}}-active{{/}}' as='slidesContent')
+            .slideTitle {{#slide.title}}
+            .slideDescripion {{#slide.description}}
+            .slideImage
+              img(src='/project-image/{{#slide.image}}')
+        
+        .slideBtns 
+          each slider as #slide, #index
+            if slider.length >= 2
+              .slideIcon(class='{{if #index === active}}-active{{/}}' on-click='choiceSlide(#index)') 
+                if #index === active 
+                  | &#9675;
+                else
+                  | &#9679;
+    

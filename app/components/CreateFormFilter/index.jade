@@ -1,0 +1,58 @@
+index:
+  .root
+    h1 Форма создания фильтров
+    .inputBox
+      label.inputName Добавить фильтры в раздел Производитель:
+      .addBox
+        input.inputArea(type='text' placeholder='Производитель' value='{{producer}}')
+        button.Btn.-blueBtn.-addBtn(on-click="addFilter('producer')") Добавить
+        
+      if filters.producer
+        .filtersList 
+          each filters.producer as #producer
+            .filter {{#producer}}
+        
+    .inputBox
+      label.inputName Добавить фильтры в раздел Тип:
+      .addBox
+        input.inputArea(type='text' placeholder='Тип' value='{{type}}')
+        button.Btn.-blueBtn.-addBtn(on-click="addFilter('type')") Добавить
+      
+      if filters.type
+        .filtersList 
+          each filters.type as #type
+            .filter {{#type}}
+        
+    .inputBox
+      label.inputName Добавить фильтры в раздел Материал:
+      .addBox
+        input.inputArea(type='text' placeholder='Материал' value='{{material}}')
+        button.Btn.-blueBtn.-addBtn(on-click="addFilter('material')") Добавить
+        
+      if filters.material
+        .filtersList 
+          each filters.material as #material
+            .filter {{#material}}
+        
+    .inputBox
+      label.inputName Добавить фильтры в раздел Форма:
+      .addBox
+        input.inputArea(type='text' placeholder='Форма' value='{{form}}')
+        button.Btn.-blueBtn.-addBtn(on-click="addFilter('form')") Добавить
+        
+      if filters.form
+        .filtersList 
+          each filters.form as #form
+            .filter {{#form}}
+      
+    button.Btn.-blueBtn(on-click='createFilters()') Создать карточку
+
+          
+          
+          
+    
+
+  
+  
+  
+  

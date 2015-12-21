@@ -1,0 +1,19 @@
+{
+  "STAGE": "qa",
+  "NODE_ENV": "production",
+  "PORT": 3000,
+  "BASE_URL": "http://alum-qa.decisionmapper.com/",
+  "FORUM_URL": "http://alum-qa.decisionmapper.com/forum",
+  "MONGO_URL": "mongodb://localhost:27017/app_staging",
+  "REDIS_URL": "redis://localhost:6379/2",
+  "SESSION_SECRET": ";g7d@B:aPH,&Z4JB>x9&?Fw2g''jU='B",
+
+  "GOOGLE_BROWSER_KEY": "AIzaSyDa-z4S86mKDsUGjKPwCEYan_e8KESjoi0",
+  "GOOGLE_SERVER_KEY": "AIzaSyDd7fk31pu5sEZEgGg1l8BoVrvu7-3XTZU",
+
+  "LINKEDIN_KEY": "KUSStefod58c3B3SmMb6bVsHGI9cx3ikCHShwxUFwugLLr8bCT5dbqLPXdQytFH_",
+  "LINKEDIN_SECRET": "jr0cNEAY-JKHUItJcc7DCY_Z5lmMNuJkpWqX--vJAl_BjiVOxO4pM9-jECtFgSjV",
+
+  "FACEBOOK_KEY": "1642850679330280",
+  "FACEBOOK_SECRET": "f5a4be64b4f620000e409c37948a4275"
+}

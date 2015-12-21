@@ -1,0 +1,10 @@
+index:
+  unless informBottom
+    .createInform
+      a(href='/create/inform/bottom').Btn.-blueBtn Создать информационный блок
+  else
+    .root(style='background-image: url("/project-image/{{informBottom.background}}")')
+      a.edit(href='/edit/inform/{{informBottom.id}}')
+      if informBottom.description
+        each informBottom.description as #paragraph
+          h1 {{#paragraph}}

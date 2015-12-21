@@ -1,0 +1,38 @@
+index:
+  .root
+    h1 Форма создания слайдера
+    .inputBox
+      label.inputName Заголовок слайда
+      input.inputArea(type='text' placeholder='Заголовок блока' value='{{obj.title}}' required)
+      
+    .inputBox
+      label.inputName Заголовок слайда
+      textarea.inputArea.-textarea(placeholder='Описание для слайда' required) {{obj.description}}
+        
+    .inputBox
+      label.inputName Изображение для слайда
+      view(is='Upload' value='{{obj.image}}' single=true)
+
+    button.Btn.-blueBtn(on-click='createSlide()') Создать слайд
+    
+    if slides 
+      .slidesList
+        each slides as #slide, #index
+          .slide
+            .delete(on-click='deleteSlide(#index)')
+              img(src='/img/cross.png')
+            .title {{#slide.title}}
+            .description {{#slide.description}}
+            img(src='/project-image/{{#slide.image}}')
+            
+      button.Btn.-blueBtn(on-click='createSlider()') Создать слайдер
+
+          
+          
+          
+    
+
+  
+  
+  
+  

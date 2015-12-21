@@ -1,0 +1,6 @@
+index:
+  .root
+    a(href='/create/card').Btn.-orangeBtn Create
+    .list
+      each cardIds as #cardId
+        view(is='Card' cardId='{{#cardId}}')
