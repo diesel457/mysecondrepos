@@ -2,7 +2,6 @@
 /public/gen
 /lib/
 *.swp
-/node_modules/
 /.idea/
 /build/
 Gemfile.lock
