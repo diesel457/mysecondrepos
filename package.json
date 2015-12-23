@@ -20,7 +20,6 @@
     "crypto": "0.0.3",
     "d-connection-alert": "~0.1.0",
     "derby": "git://github.com/dmapper/derby#webpack",
-    "derby-invite": "git://github.com/dmapper/derby-invite#webpack",
     "derby-login": "0.4.13",
     "derby-parsing": "git://github.com/dmapper/derby-parsing#webpack",
     "derby-templates": "git://github.com/dmapper/derby-templates#webpack",
